@@ -9,8 +9,8 @@ function getUrlParam(name) {
 }
 
 var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
-httpRequest.open('GET',
-    'https://github.com/login/oauth/access_token?client_id=Iv1.706e309d265ed0af&client_secret=2e4cf20169960d0126e8afe34b4898d554bd632d&code='+getUrlParam("code")
+httpRequest.open('POST',
+    'https://github.com/login/oauth/access_token?client_id=Iv1.706e309d265ed0af&client_secret=&code='+getUrlParam("code")
     , true);
 httpRequest.send();
 httpRequest.onreadystatechange = function () {
